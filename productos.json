@@ -1,0 +1,62 @@
+[
+    {
+        "nombre": "Producto 1",
+        "imagen": "producto1.jpg",
+        "precio": "$10",
+        "descripcion": "Descripción del producto 1"
+    },
+    {
+        "nombre": "Producto 2",
+        "imagen": "producto2.jpg",
+        "precio": "$15",
+        "descripcion": "Descripción del producto 2"
+    },
+    {
+        "nombre": "Producto 3",
+        "imagen": "producto1.jpg",
+        "precio": "$10",
+        "descripcion": "Descripción del producto 1"
+    },
+    {
+        "nombre": "Producto 4",
+        "imagen": "producto2.jpg",
+        "precio": "$15",
+        "descripcion": "Descripción del producto 2"
+    },
+    {
+        "nombre": "Producto 5",
+        "imagen": "producto1.jpg",
+        "precio": "$10",
+        "descripcion": "Descripción del producto 1"
+    },
+    {
+        "nombre": "Producto 6",
+        "imagen": "producto2.jpg",
+        "precio": "$15",
+        "descripcion": "Descripción del producto 2"
+    },
+    {
+        "nombre": "Producto 7",
+        "imagen": "producto1.jpg",
+        "precio": "$10",
+        "descripcion": "Descripción del producto 1"
+    },
+    {
+        "nombre": "Producto 8",
+        "imagen": "producto2.jpg",
+        "precio": "$15",
+        "descripcion": "Descripción del producto 2"
+    },
+    {
+        "nombre": "Producto 9",
+        "imagen": "producto1.jpg",
+        "precio": "$10",
+        "descripcion": "Descripción del producto 1"
+    },
+    {
+        "nombre": "Producto 10",
+        "imagen": "producto2.jpg",
+        "precio": "$15",
+        "descripcion": "Descripción del producto 2"
+    }
+]
