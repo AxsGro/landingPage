@@ -1,33 +1,33 @@
 [
     {
-        "nombre": "Producto 1",
-        "imagen": "producto1.jpg",
-        "precio": "$10",
-        "descripcion": "Descripción del producto 1"
+        "nombre": "Figura de Colección Batman Returns Batman Michael Keaton Neca Articulado",
+        "imagen": "images/bat.jpg",
+        "precio": "$8,200",
+        "descripcion": "Batman 1989 Película Michael Keaton Figura de acción a escala 1:4: ¡Gran Batman! Figura de acción de Batman basada en la película Batman de 1989. La figura articulada de 18 pulgadas de alto presenta la imagen de Michael Keaton. Detalle increíble, 20 puntos de articulación y una capa de tela real. ¡Incluye un batarang, una pistola de agarre, manos intercambiables y más!"
     },
     {
-        "nombre": "Producto 2",
-        "imagen": "producto2.jpg",
-        "precio": "$15",
-        "descripcion": "Descripción del producto 2"
+        "nombre": "DeLorean, Doc. Emmet, McFly en escala 8-1",
+        "imagen": "images/bttf.jpeg",
+        "precio": "$2,000",
+        "descripcion": "Paquete coleccionable con los personajes principales de Volver al futuro, con figuras de 25 cm de alto."
     },
     {
-        "nombre": "Producto 3",
-        "imagen": "producto1.jpg",
-        "precio": "$10",
-        "descripcion": "Descripción del producto 1"
+        "nombre": "SWAMP THING VOL. 3",
+        "imagen": "images/swamp.jpg",
+        "precio": "$410",
+        "descripcion": "Continuando con las colecciones de tapa dura de la premiada carrera de Alan Moore en THE SAGA OF THE SWAMP THING, este tercer volumen está lleno de horrores viscerales que incluyen vampiros submarinos, un hombre lobo con una maldición inusual, el loco loco llamado Nukeface. Lo mejor de todo es que este volumen presenta el debut en cómics de John Constantine, Hellblazer, quien lanza Swamp Thing en un viaje de autodescubrimiento que lo llevará desde los rincones más oscuros de América hasta las raíces de su propia herencia oculta."
     },
     {
-        "nombre": "Producto 4",
-        "imagen": "producto2.jpg",
-        "precio": "$15",
-        "descripcion": "Descripción del producto 2"
+        "nombre": "Edición coleccionista Hollow Knight",
+        "imagen": "images/hk.jpeg",
+        "precio": "$1,289",
+        "descripcion": "Hollow Knight ya está disponible en una edición física para PC (disco sin DRM con clave Steam), incluida una edición especial para coleccionistas"
     },
     {
-        "nombre": "Producto 5",
-        "imagen": "producto1.jpg",
-        "precio": "$10",
-        "descripcion": "Descripción del producto 1"
+        "nombre": "Hasbro Marvel Legends Series - Wolverine",
+        "imagen": "images/wolverine.jpg",
+        "precio": "$1,199",
+        "descripcion": "El proyecto Arma X dotó a Wolverine de un esqueleto de adamantium, convirtiéndolo en un mutante con capacidades de regeneración excepcionales. Con una rica historia de más de 80 años en cómics y películas, Marvel se ha convertido en un referente para coleccionistas a nivel mundial. La colección Marvel Legends Series incluye figuras de personajes tanto del Universo Cinematográfico de Marvel como de las historietas. Estas figuras están diseñadas con un alto nivel de detalle y múltiples puntos de articulación, lo que las hace ideales para ser expuestas en colecciones. La serie Marvel Legends brinda a los aficionados y coleccionistas productos de alta calidad inspirados en sus personajes favoritos, abarcando desde figuras y vehículos hasta elementos de juego de rol. Las figuras adicionales se venden por separado y están sujetas a disponibilidad. Derechos de autor 2020 MARVEL. Hasbro y todos los términos relacionados son marcas de Hasbro."
     },
     {
         "nombre": "Producto 6",

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+</head>
+<body>
+
+<header>
+    <h1>Detalles del Producto</h1>
+</header>
+
+<div class="container">
+    <div id="product-details"></div>
+</div>
+
+<script>
+    // Nombre
+    var params = new URLSearchParams(window.location.search);
+    var productName = params.get('id');
+
+    // Producto
+    var product = products.find(function(item) {
+        return item.nombre === productName;
+    });
+
+    // Detalles
+    if (product) {
+        var productDetails = document.getElementById("product-details");
+
+        var img = document.createElement("img");
+        img.src = product.imagen;
+        img.alt = product.nombre;
+
+        var name = document.createElement("h2");
+        name.textContent = product.nombre;
+
+        var price = document.createElement("p");
+        price.textContent = "Precio: " + product.precio;
+
+        var desc = document.createElement("p");
+        desc.textContent = product.descripcion;
+
+        productDetails.appendChild(img);
+        productDetails.appendChild(name);
+        productDetails.appendChild(price);
+        productDetails.appendChild(desc);
+    } else {
+        // Excepcion
+        var error = document.createElement("p");
+        error.textContent = "El producto no se encontró.";
+        document.body.appendChild(error);
+    }
+</script>
+
+</body>
+</html>

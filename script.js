@@ -1,17 +1,14 @@
-// Función para cargar los productos en la página
 function cargarProductos() {
-    var productList = document.getElementById("product-list");
-
-    // Cargar productos desde el archivo JSON
     fetch('productos.json')
         .then(response => response.json())
         .then(data => {
+            var productList = document.getElementById("product-list");
+
             data.forEach(function(product) {
                 var card = document.createElement("div");
                 card.className = "product-card";
 
                 var img = document.createElement("img");
-                img.className = "product-img";
                 img.src = product.imagen;
                 img.alt = product.nombre;
 
@@ -24,8 +21,9 @@ function cargarProductos() {
                 var desc = document.createElement("p");
                 desc.textContent = product.descripcion;
 
-                var buyBtn = document.createElement("button");
-                buyBtn.textContent = "Comprar";
+                var buyBtn = document.createElement("a");
+                buyBtn.textContent = "Ver detalles";
+                buyBtn.href = "producto.html?id=" + encodeURIComponent(product.nombre);
 
                 card.appendChild(img);
                 card.appendChild(name);
