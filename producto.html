@@ -1,67 +1,51 @@
+<!-- producto.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KG4D7NMEXH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KG4D7NMEXH');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles del Producto</title>
 </head>
 <body>
+    <div id="product-details">
+        <!-- Aquí se cargarán los detalles del producto -->
+    </div>
 
-<header>
-    <h1>Detalles del Producto</h1>
-</header>
+    <script>
+        // Obtener el parámetro de consulta de la URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const productName = urlParams.get('id');
 
-<div class="container">
-    <div id="product-details"></div>
-</div>
+        // Función para cargar los detalles del producto
+        function cargarDetallesProducto(productName) {
+            // Hacer una solicitud para obtener los detalles del producto según el nombre
+            fetch('productos.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Encontrar el producto por su nombre
+                    const product = data.find(item => item.nombre === productName);
 
-<script>
-    // Nombre
-    var params = new URLSearchParams(window.location.search);
-    var productName = params.get('id');
+                    if (product) {
+                        // Mostrar los detalles del producto
+                        const productDetails = document.getElementById("product-details");
+                        productDetails.innerHTML = `
+                            <h2>${product.nombre}</h2>
+                            <img src="${product.imagen}" alt="${product.nombre}">
+                            <p>Precio: ${product.precio}</p>
+                            <p>${product.descripcion}</p>
+                            <a href="javascript:history.back()">Volver atrás</a>
+                        `;
+                    } else {
+                        // Manejar el caso en el que el producto no se encuentra
+                        console.error('Producto no encontrado');
+                    }
+                })
+                .catch(error => console.error('Error al cargar los detalles del producto:', error));
+        }
 
-    // Producto
-    var product = products.find(function(item) {
-        return item.nombre === productName;
-    });
-
-    // Detalles
-    if (product) {
-        var productDetails = document.getElementById("product-details");
-
-        var img = document.createElement("img");
-        img.src = product.imagen;
-        img.alt = product.nombre;
-
-        var name = document.createElement("h2");
-        name.textContent = product.nombre;
-
-        var price = document.createElement("p");
-        price.textContent = "Precio: " + product.precio;
-
-        var desc = document.createElement("p");
-        desc.textContent = product.descripcion;
-
-        productDetails.appendChild(img);
-        productDetails.appendChild(name);
-        productDetails.appendChild(price);
-        productDetails.appendChild(desc);
-    } else {
-        // Excepcion
-        var error = document.createElement("p");
-        error.textContent = "El producto no se encontró.";
-        document.body.appendChild(error);
-    }
-</script>
-
+        // Llamar a la función para cargar los detalles del producto
+        cargarDetallesProducto(productName);
+    </script>
 </body>
 </html>
