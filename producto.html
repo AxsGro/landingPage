@@ -1,51 +1,30 @@
-<!-- producto.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <a href="index.html" style="color: white;">
+                <h1>Geek Paradise</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div id="product-details">
         <!-- Aquí se cargarán los detalles del producto -->
     </div>
 
-    <script>
-        // Obtener el parámetro de consulta de la URL
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const productName = urlParams.get('id');
-
-        // Función para cargar los detalles del producto
-        function cargarDetallesProducto(productName) {
-            // Hacer una solicitud para obtener los detalles del producto según el nombre
-            fetch('productos.json')
-                .then(response => response.json())
-                .then(data => {
-                    // Encontrar el producto por su nombre
-                    const product = data.find(item => item.nombre === productName);
-
-                    if (product) {
-                        // Mostrar los detalles del producto
-                        const productDetails = document.getElementById("product-details");
-                        productDetails.innerHTML = `
-                            <h2>${product.nombre}</h2>
-                            <img src="${product.imagen}" alt="${product.nombre}">
-                            <p>Precio: ${product.precio}</p>
-                            <p>${product.descripcion}</p>
-                            <a href="javascript:history.back()">Volver atrás</a>
-                        `;
-                    } else {
-                        // Manejar el caso en el que el producto no se encuentra
-                        console.error('Producto no encontrado');
-                    }
-                })
-                .catch(error => console.error('Error al cargar los detalles del producto:', error));
-        }
-
-        // Llamar a la función para cargar los detalles del producto
-        cargarDetallesProducto(productName);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
