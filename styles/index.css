@@ -14,9 +14,10 @@ footer {
     
 }
 
-header{
-    padding: 20px;
-    background-color: white;
+header {
+  background-color: #f0f2f5;
+  color: white;
+  padding: 10px;
 }
 
 /*  estilos menu*/ 
@@ -31,7 +32,7 @@ header{
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .product-card {
@@ -155,3 +156,18 @@ header{
     height: 20px;
   }
   
+  .btn {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    color: #111;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #ddb347;
+}

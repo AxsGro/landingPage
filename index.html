@@ -15,7 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/iconlog.png">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css">
+    
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
@@ -129,6 +130,28 @@
                 </svg>
             </a>
         </div>
+
+        <div class="footer--column column--newsletter is--last block">
+            <div class="column--headline">Newsletter</div>
+            <div class="column--content" data-newsletter="true">
+            <p class="column--desc">
+            Subscribe to the free newsletter and ensure that you will no longer miss any offers or news of Demoshop.
+            </p>
+            <form class="newsletter--form" action="http://localhost/tienda/newsletter" method="post">
+            <input type="hidden" value="1" name="subscribeToNewsletter" />
+            <div class="content">
+            <input type="email" aria-label="Your email address" name="newsletter" class="newsletter--field" placeholder="Your email address" />
+            <button type="submit" aria-label="Subscribe to newsletter" class="newsletter--button btn">
+            <i class="icon--mail"></i> <span class="button--text">Subscribe to newsletter</span>
+            </button>
+            </div>
+            <p class="privacy-information block-group">
+            I have read the <a title="data protection information" href="http://localhost/tienda/datenschutz" target="_blank">data protection information</a>.
+            </p>
+            </form>
+            </div>
+            </div>
+            </div>
 
     </footer>
 
