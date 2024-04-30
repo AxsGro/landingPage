@@ -87,7 +87,9 @@ cargarDetallesProducto(productName);
                     <div class="product-footer">
                         <div class="product-price">${product.precio}</div>
 
-                        <button type="button" class="btn btn-primary" data-producto="${product.nombre}">Ver mas</button>
+                        <div class="product-btn" data-producto="${product.nombre}">
+                        <button type="button" class="btn btn-primary" data-producto="${product.nombre}">
+                        Primary</button></div>
 
 
                     </div>
