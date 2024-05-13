@@ -3,11 +3,11 @@
 
 
 <script src="https://www.paypal.com/sdk/js?client-id=BAAmHp_5NKbo00rxUKpqfW1GTxkdWHGEUqnzVr-ppYJsdXBhATsJTNMQDhPCR2KWZ6HHX3FIOjSu6Q1PWc&components=hosted-buttons&disable-funding=venmo&currency=MXN"></script>
-<div id="paypal-container-DDAGEKLXSBYVC"></div>
+<div id="paypal-container-NXTGPXMQFE9DN"></div>
 <script>
   paypal.HostedButtons({
-    hostedButtonId: "DDAGEKLXSBYVC",
-  }).render("#paypal-container-DDAGEKLXSBYVC")
+    hostedButtonId: "NXTGPXMQFE9DN",
+  }).render("#paypal-container-NXTGPXMQFE9DN")
 </script>
 
 </html>
