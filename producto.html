@@ -85,6 +85,35 @@
     <button type="button" class="btn btn-outline-danger">Home</button>
     <button type="button" class="btn btn-outline-danger">Juguetes</button>
 
+      
+<button id="comprarAhoraBtn" type="button" class="btn btn-outline-danger">Comprar ahora</button>
+
+
+<div id="paypal-container-NXTGPXMQFE9DN"></div>
+
+<script>
+
+function cargarPayPalScript() {
+   
+    var script = document.createElement('script');
+    script.src = "https://www.paypal.com/sdk/js?client-id=BAAmHp_5NKbo00rxUKpqfW1GTxkdWHGEUqnzVr-ppYJsdXBhATsJTNMQDhPCR2KWZ6HHX3FIOjSu6Q1PWc&components=hosted-buttons&disable-funding=venmo&currency=MXN";
+    
+    script.onload = function() {
+        
+        paypal.HostedButtons({
+            hostedButtonId: "NXTGPXMQFE9DN",
+        }).render("#paypal-container-NXTGPXMQFE9DN");
+    };
+    
+    document.body.appendChild(script);
+}
+
+
+document.getElementById("comprarAhoraBtn").addEventListener("click", function() {
+    cargarPayPalScript();
+});
+</script>
+
 </header>
 
     <div id="product-details">
