@@ -23,7 +23,7 @@ function cargarProductos() {
 
                 var buyBtn = document.createElement("a");
                 buyBtn.textContent = "Ver detalles";
-                buyBtn.href = "producto.html?producto=" + encodeURIComponent(JSON.stringify(product));
+                buyBtn.href = "producto.html?id=" + encodeURIComponent(product.nombre);
 
                 card.appendChild(img);
                 card.appendChild(name);
