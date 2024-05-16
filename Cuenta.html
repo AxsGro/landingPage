@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,150 +12,219 @@
       margin: 0 10px;
       font-size: 20px;
     }
+
     .content-wrapper {
-      margin-left: 0 !important; /* Eliminar margen para la sidebar */
+      margin-left: 0 !important;
+      /* Eliminar margen para la sidebar */
     }
   </style>
 </head>
+
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <ul class="navbar-nav">
-      <!-- Botón personalizado eliminado -->
-    </ul>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" title="Regreso a home"><img src="images/logocompleto.png"
+          title="Logo de tienda" alt="Logo Geek" width="200px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">
+            <i class="bi bi-search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+              </svg>
+            </i>
+          </button>
+        </form>
+
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+          <button type="button" class="btn btn-outline-warning">
+            <i class="bi bi-heart-fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+              </svg>
+            </i>
+          </button>
+
+          <button type="button" class="btn btn-outline-warning">
+            <i class="bi bi-person-fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
+                class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+              </svg>
+            </i>
+            Mi cuenta
+          </button>
+
+          <button type="button" class="btn btn-outline-warning">
+            <i class="bi bi-cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+              </svg>
+            </i>
+            $0.00*
+          </button>
+
+        </ul>
+      </div>
+    </div>
   </nav>
-  <!-- /.navbar -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <ul class="navbar-nav">
+        <!-- Botón personalizado eliminado -->
+      </ul>
+    </nav>
+    <!-- /.navbar -->
 
-  <!-- Main Sidebar Container -->
-  <!-- Sidebar eliminada -->
+    <!-- Main Sidebar Container -->
+    <!-- Sidebar eliminada -->
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Perfil</h1>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Perfil</h1>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card card-primary card-outline">
-              <div class="card-body box-profile">
-                <div class="text-center">
-                  <img id="profile-img" class="profile-user-img img-fluid img-circle" src="https://adminlte.io/themes/v3/dist/img/user4-128x128.jpg" alt="Foto de perfil" onclick="document.getElementById('upload-img').click();">
-                  <input type="file" id="upload-img" style="display:none" onchange="loadImage(event)">
-                </div>
-                <h3 class="profile-username text-center" id="profile-name"> <span id="profile-fullname"></span></h3>
-              </div>
-            </div>
-            <div class="social-icons text-center">
-              <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
-              <a href="https://facebook.com" target="_blank" class="fab fa-facebook"></a>
-              <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
-            </div>
-          </div>
-          <div class="col-md-9">
-            <div class="card">
-              <div class="card-header p-2">
-                <ul class="nav nav-pills">
-                  <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Actividad</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#profile-info" data-toggle="tab">Información del perfil</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#favorites" data-toggle="tab">Favoritos</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#contacts" data-toggle="tab">Contactos</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#wishlist" data-toggle="tab">Lista de deseos</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Configuración</a></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <div class="tab-content">
-                  <div class="active tab-pane" id="activity">
-                    <!-- Contenido de actividad -->
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                  <div class="text-center">
+                    <img id="profile-img" class="profile-user-img img-fluid img-circle"
+                      src="https://adminlte.io/themes/v3/dist/img/user4-128x128.jpg" alt="Foto de perfil"
+                      onclick="document.getElementById('upload-img').click();">
+                    <input type="file" id="upload-img" style="display:none" onchange="loadImage(event)">
                   </div>
-                
-                  <div class="tab-pane" id="profile-info">
-                    <div class="form-horizontal">
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Nombre</label>
-                            <div class="col-sm-8">
-                                <input type="text" id="profile-name-input" class="form-control" style="display: none;">
-                                <label id="profile-name-label" class="form-control-plaintext">John</label>
-                            </div>
-                            <div class="col-sm-2">
-                                <button class="btn btn-primary btn-block" onclick="editProfileField('name')">Editar</button>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Apellidos</label>
-                            <div class="col-sm-8">
-                                <input type="text" id="profile-lastname-input" class="form-control" style="display: none;">
-                                <label id="profile-lastname-label" class="form-control-plaintext">Doe</label>
-                            </div>
-                            <div class="col-sm-2">
-                                <button class="btn btn-primary btn-block" onclick="editProfileField('lastname')">Editar</button>
-                            </div>
-                        </div>                      
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Correo Electrónico</label>
-                            <div class="col-sm-8">
-                                <input type="text" id="profile-email-input" class="form-control" style="display: none;">
-                                <label id="profile-email-label" class="form-control-plaintext">correo@example.com</label>
-                            </div>
-                            <div class="col-sm-2">
-                                <button class="btn btn-primary btn-block" onclick="editProfileField('email')">Editar</button>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Teléfono</label>
-                            <div class="col-sm-8">
-                                <input type="text" id="profile-phone-input" class="form-control" style="display: none;">
-                                <label id="profile-phone-label" class="form-control-plaintext">123-456-7890</label>
-                            </div>
-                            <div class="col-sm-2">
-                                <button class="btn btn-primary btn-block" onclick="editProfileField('phone')">Editar</button>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Pais</label>
-                            <div class="col-sm-8">
-                                <input type="text" id="profile-city-input" class="form-control" style="display: none;">
-                                <label id="profile-city-label" class="form-control-plaintext">Pais de Ejemplo</label>
-                            </div>
-                            <div class="col-sm-2">
-                                <button class="btn btn-primary btn-block" onclick="editProfileField('city')">Editar</button>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Ciudad</label>
-                            <div class="col-sm-8">
-                                <input type="text" id="profile-city-input" class="form-control" style="display: none;">
-                                <label id="profile-city-label" class="form-control-plaintext">Ciudad de Ejemplo</label>
-                            </div>
-                            <div class="col-sm-2">
-                                <button class="btn btn-primary btn-block" onclick="editProfileField('city')">Editar</button>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Dirección</label>
-                            <div class="col-sm-8">
-                                <input type="text" id="profile-address-input" class="form-control" style="display: none;">
-                                <label id="profile-address-label" class="form-control-plaintext">Dirección de Ejemplo</label>
-                            </div>
-                            <div class="col-sm-2">
-                                <button class="btn btn-primary btn-block" onclick="editProfileField('address')">Editar</button>
-                            
-                            </div>
-                        </div>
-                    </div>
+                  <h3 class="profile-username text-center" id="profile-name"> <span id="profile-fullname"></span></h3>
                 </div>
-                
-                                
+              </div>
+              <div class="social-icons text-center">
+                <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+                <a href="https://facebook.com" target="_blank" class="fab fa-facebook"></a>
+                <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="card">
+                <div class="card-header p-2">
+                  <ul class="nav nav-pills">
+                    
+                    <li class="nav-item"><a class="nav-link" href="#profile-info" data-toggle="tab">Información del
+                        perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#favorites" data-toggle="tab">Favoritos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historial.html" data-toggle="tab">Historial de compras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#wishlist" data-toggle="tab">Carrito</a></li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="active tab-pane" id="activity">
+                      <!-- Contenido de actividad -->
+                    </div>
+
+                    <div class="tab-pane" id="profile-info">
+                      <div class="form-horizontal">
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">Nombre</label>
+                          <div class="col-sm-8">
+                            <input type="text" id="profile-name-input" class="form-control" style="display: none;">
+                            <label id="profile-name-label" class="form-control-plaintext">John</label>
+                          </div>
+                          <div class="col-sm-2">
+                            <button class="btn btn-primary btn-block" onclick="editProfileField('name')">Editar</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">Apellidos</label>
+                          <div class="col-sm-8">
+                            <input type="text" id="profile-lastname-input" class="form-control" style="display: none;">
+                            <label id="profile-lastname-label" class="form-control-plaintext">Doe</label>
+                          </div>
+                          <div class="col-sm-2">
+                            <button class="btn btn-primary btn-block"
+                              onclick="editProfileField('lastname')">Editar</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">Correo Electrónico</label>
+                          <div class="col-sm-8">
+                            <input type="text" id="profile-email-input" class="form-control" style="display: none;">
+                            <label id="profile-email-label" class="form-control-plaintext">correo@example.com</label>
+                          </div>
+                          <div class="col-sm-2">
+                            <button class="btn btn-primary btn-block"
+                              onclick="editProfileField('email')">Editar</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">Teléfono</label>
+                          <div class="col-sm-8">
+                            <input type="text" id="profile-phone-input" class="form-control" style="display: none;">
+                            <label id="profile-phone-label" class="form-control-plaintext">123-456-7890</label>
+                          </div>
+                          <div class="col-sm-2">
+                            <button class="btn btn-primary btn-block"
+                              onclick="editProfileField('phone')">Editar</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">Pais</label>
+                          <div class="col-sm-8">
+                            <input type="text" id="profile-city-input" class="form-control" style="display: none;">
+                            <label id="profile-city-label" class="form-control-plaintext">Pais de Ejemplo</label>
+                          </div>
+                          <div class="col-sm-2">
+                            <button class="btn btn-primary btn-block" onclick="editProfileField('city')">Editar</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">Ciudad</label>
+                          <div class="col-sm-8">
+                            <input type="text" id="profile-city-input" class="form-control" style="display: none;">
+                            <label id="profile-city-label" class="form-control-plaintext">Ciudad de Ejemplo</label>
+                          </div>
+                          <div class="col-sm-2">
+                            <button class="btn btn-primary btn-block" onclick="editProfileField('city')">Editar</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">Dirección</label>
+                          <div class="col-sm-8">
+                            <input type="text" id="profile-address-input" class="form-control" style="display: none;">
+                            <label id="profile-address-label" class="form-control-plaintext">Dirección de
+                              Ejemplo</label>
+                          </div>
+                          <div class="col-sm-2">
+                            <button class="btn btn-primary btn-block"
+                              onclick="editProfileField('address')">Editar</button>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
 
                   </div>
                   <div class="tab-pane" id="favorites">
@@ -177,93 +247,94 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
     </section>
   </div>
-</div>
+  </div>
 
-<script src="https://adminlte.io/themes/v3/plugins/jquery/jquery.min.js"></script>
-<script src="https://adminlte.io/themes/v3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://adminlte.io/themes/v3/dist/js/adminlte.min.js"></script>
-<script>
+  <script src="https://adminlte.io/themes/v3/plugins/jquery/jquery.min.js"></script>
+  <script src="https://adminlte.io/themes/v3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://adminlte.io/themes/v3/dist/js/adminlte.min.js"></script>
+  <script>
 
-  function loadImage(event) {
-    const output = document.getElementById('profile-img');
-    output.src = URL.createObjectURL(event.target.files[0]);
-    output.onload = function() {
-      URL.revokeObjectURL(output.src) // free memory
-    }
-  }
-
-  function editProfileField(field) {
-    const inputField = document.getElementById(`profile-${field}-input`);
-    const labelField = document.getElementById(`profile-${field}-label`);
-    inputField.style.display = 'block';
-    inputField.value = labelField.textContent;
-    labelField.style.display = 'none';
-    inputField.focus();
-  
-    // Ocultar el campo de entrada cuando se presiona "Enter"
-    inputField.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-        saveProfileField(field);
+    function loadImage(event) {
+      const output = document.getElementById('profile-img');
+      output.src = URL.createObjectURL(event.target.files[0]);
+      output.onload = function () {
+        URL.revokeObjectURL(output.src) // free memory
       }
+    }
+
+    function editProfileField(field) {
+      const inputField = document.getElementById(`profile-${field}-input`);
+      const labelField = document.getElementById(`profile-${field}-label`);
+      inputField.style.display = 'block';
+      inputField.value = labelField.textContent;
+      labelField.style.display = 'none';
+      inputField.focus();
+
+      // Ocultar el campo de entrada cuando se presiona "Enter"
+      inputField.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+          saveProfileField(field);
+        }
+      });
+    }
+
+    // Función para guardar los datos del perfil en el almacenamiento local
+    function saveProfileData() {
+      localStorage.setItem('profileName', document.getElementById('profile-name-label').textContent);
+      localStorage.setItem('profileLastname', document.getElementById('profile-lastname-label').textContent);
+      localStorage.setItem('profileEmail', document.getElementById('profile-email-label').textContent);
+      localStorage.setItem('profilePhone', document.getElementById('profile-phone-label').textContent);
+      localStorage.setItem('profileCity', document.getElementById('profile-city-label').textContent);
+      localStorage.setItem('profileAddress', document.getElementById('profile-address-label').textContent);
+    }
+
+    // Función para cargar los datos del perfil desde el almacenamiento local
+    function loadProfileData() {
+      document.getElementById('profile-name-label').textContent = localStorage.getItem('profileName') || 'John';
+      document.getElementById('profile-lastname-label').textContent = localStorage.getItem('profileLastname') || 'Doe';
+      document.getElementById('profile-email-label').textContent = localStorage.getItem('profileEmail') || 'correo@example.com';
+      document.getElementById('profile-phone-label').textContent = localStorage.getItem('profilePhone') || '123-456-7890';
+      document.getElementById('profile-city-label').textContent = localStorage.getItem('profileCity') || 'Pais de Ejemplo';
+      document.getElementById('profile-address-label').textContent = localStorage.getItem('profileAddress') || 'Dirección de Ejemplo';
+
+      // Concatenar nombre y apellido
+      const fullName = (localStorage.getItem('profileName') || 'John') + ' ' + (localStorage.getItem('profileLastname') || 'Doe');
+      document.getElementById('profile-fullname').textContent = fullName;
+
+      // Cargar la imagen de perfil desde el almacenamiento local
+      const profileImage = localStorage.getItem('profileImage');
+      if (profileImage) {
+        document.getElementById('profile-img').src = profileImage;
+      }
+    }
+
+    // Llamar a la función para cargar los datos del perfil cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function () {
+      loadProfileData();
     });
-  }
 
-  // Función para guardar los datos del perfil en el almacenamiento local
-  function saveProfileData() {
-    localStorage.setItem('profileName', document.getElementById('profile-name-label').textContent);
-    localStorage.setItem('profileLastname', document.getElementById('profile-lastname-label').textContent);
-    localStorage.setItem('profileEmail', document.getElementById('profile-email-label').textContent);
-    localStorage.setItem('profilePhone', document.getElementById('profile-phone-label').textContent);
-    localStorage.setItem('profileCity', document.getElementById('profile-city-label').textContent);
-    localStorage.setItem('profileAddress', document.getElementById('profile-address-label').textContent);
-  }
+    // Llamar a la función para guardar los datos del perfil cuando se realiza una edición
+    function saveProfileField(field) {
+      const inputField = document.getElementById(`profile-${field}-input`);
+      const labelField = document.getElementById(`profile-${field}-label`);
+      labelField.textContent = inputField.value;
+      labelField.style.display = 'block';
+      inputField.style.display = 'none';
 
-  // Función para cargar los datos del perfil desde el almacenamiento local
-  function loadProfileData() {
-    document.getElementById('profile-name-label').textContent = localStorage.getItem('profileName') || 'John';
-    document.getElementById('profile-lastname-label').textContent = localStorage.getItem('profileLastname') || 'Doe';
-    document.getElementById('profile-email-label').textContent = localStorage.getItem('profileEmail') || 'correo@example.com';
-    document.getElementById('profile-phone-label').textContent = localStorage.getItem('profilePhone') || '123-456-7890';
-    document.getElementById('profile-city-label').textContent = localStorage.getItem('profileCity') || 'Pais de Ejemplo';
-    document.getElementById('profile-address-label').textContent = localStorage.getItem('profileAddress') || 'Dirección de Ejemplo';
-  
-    // Concatenar nombre y apellido
-    const fullName = (localStorage.getItem('profileName') || 'John') + ' ' + (localStorage.getItem('profileLastname') || 'Doe');
-    document.getElementById('profile-fullname').textContent = fullName;
-  
-    // Cargar la imagen de perfil desde el almacenamiento local
-    const profileImage = localStorage.getItem('profileImage');
-    if (profileImage) {
-      document.getElementById('profile-img').src = profileImage;
+      // Guardar los datos actualizados del perfil
+      saveProfileData();
+
+      // Actualizar nombre y apellido debajo de la imagen
+      if (field === 'name') {
+        document.getElementById('profile-name').textContent = inputField.value;
+      } else if (field === 'lastname') {
+        document.getElementById('profile-lastname').textContent = inputField.value;
+      }
     }
-  }
-
-  // Llamar a la función para cargar los datos del perfil cuando se carga la página
-  document.addEventListener('DOMContentLoaded', function() {
-    loadProfileData();
-  });
-
-  // Llamar a la función para guardar los datos del perfil cuando se realiza una edición
-  function saveProfileField(field) {
-    const inputField = document.getElementById(`profile-${field}-input`);
-    const labelField = document.getElementById(`profile-${field}-label`);
-    labelField.textContent = inputField.value;
-    labelField.style.display = 'block';
-    inputField.style.display = 'none';
-  
-    // Guardar los datos actualizados del perfil
-    saveProfileData();
-  
-    // Actualizar nombre y apellido debajo de la imagen
-    if (field === 'name') {
-      document.getElementById('profile-name').textContent = inputField.value;
-    } else if (field === 'lastname') {
-      document.getElementById('profile-lastname').textContent = inputField.value;
-    }
-  }
-</script>
+  </script>
 </body>
+
 </html>
