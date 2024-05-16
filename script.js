@@ -42,7 +42,7 @@ cargarProductos();
 // Obtener el parámetro de consulta de la URL
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const productName = urlParams.get('id');
+const productName = urlParams.get('producto');
 
 // Función para cargar los detalles del producto
 function cargarDetallesProducto(productName) {
