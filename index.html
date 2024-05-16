@@ -16,7 +16,7 @@
     <link rel="icon" href="images/iconlog.png">
     <title>Geek Paradise Tienda de coleccionables</title>
     <meta name="description"
-    content="Tienda de colecciobales de todo tipo desde videojuegos y jueguetes hasta comics y revistas, todo desde nuestra tienda online." />
+        content="Tienda de colecciobales de todo tipo desde videojuegos y jueguetes hasta comics y revistas, todo desde nuestra tienda online." />
     <meta name="keywords" content="Comics, Juguetes, Videojuegos, Figuras" />
     <meta name="author" content="
     José Alexis Silva Guerrero
@@ -28,11 +28,13 @@
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html" title="regreso a home"><img src="images/logocompleto.png" alt="Logo Geek" title="logo de tienda" width="200px"></a>
+                <a class="navbar-brand" href="index.html" title="regreso a home"><img src="images/logocompleto.png"
+                        alt="Logo Geek" title="logo de tienda" width="200px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -52,16 +54,27 @@
                         </button>
                     </form>
 
+                    <!-- Botones de ordenación -->
+                    <div class="sort-buttons">
+                        <button class="btn btn-primary" onclick="ordenarProductos('nombre', true)">Ordenar A-Z</button>
+                        <button class="btn btn-primary" onclick="ordenarProductos('nombre', false)">Ordenar Z-A</button>
+                        <button class="btn btn-primary" onclick="ordenarProductos('precio', true)">Precio Menor a
+                            Mayor</button>
+                        <button class="btn btn-primary" onclick="ordenarProductos('precio', false)">Precio Mayor a
+                            Menor</button>
+                    </div>
 
                     <!-- Botones de Iniciar Sesión y Registrarse -->
-                  <ul class="navbar-nav">
-               <li class="nav-item">
-           <button class="btn btn-success" onclick="window.location.href='login.html'">Iniciar Sesión</button>
-               </li>
-                   <li class="nav-item">
-            <button class="btn btn-info" onclick="window.location.href='register.html'">Registrarse</button>
-                    </li>
-                  </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button class="btn btn-success" onclick="window.location.href='login.html'">Iniciar
+                                Sesión</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-info"
+                                onclick="window.location.href='register.html'">Registrarse</button>
+                        </li>
+                    </ul>
 
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
 
@@ -115,129 +128,140 @@
     <footer>
         <div class="socials-container">
             <a href="#" title="redes sociales" class="social twitter">
-              <svg height="1em" viewBox="0 0 512 512">
-                <path
-                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                ></path>
-              </svg>
+                <svg height="1em" viewBox="0 0 512 512">
+                    <path
+                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                    </path>
+                </svg>
             </a>
-          
-            <a href="https://www.facebook.com/profile.php?id=61558385277108&mibextid=ZbWKwL" title="link a facebook" class="social facebook"
-              ><svg height="1em" viewBox="0 0 320 512">
-                <path
-                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                ></path></svg>
+
+            <a href="https://www.facebook.com/profile.php?id=61558385277108&mibextid=ZbWKwL" title="link a facebook"
+                class="social facebook"><svg height="1em" viewBox="0 0 320 512">
+                    <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                    </path>
+                </svg>
             </a>
-          
+
             <a href="#" title="redes sociales" class="social google-plus">
-              <svg height="1em" viewBox="0 0 640 512">
-                <path
-                  d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"
-                ></path>
-              </svg>
+                <svg height="1em" viewBox="0 0 640 512">
+                    <path
+                        d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z">
+                    </path>
+                </svg>
             </a>
-          
-            <a href="https://www.instagram.com/geekparadise0/" title="link a instagram" class="social instagram"
-              ><svg height="1em" viewBox="0 0 448 512">
-                <path
-                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                ></path></svg>
+
+            <a href="https://www.instagram.com/geekparadise0/" title="link a instagram" class="social instagram"><svg
+                    height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                    </path>
+                </svg>
             </a>
-          </div>
-          
+        </div>
+
     </footer>
 
-    <!-- JavaScript y dependencias -->
+
     <script src="../bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/index.js"></script>
-
-
-
-    <script src="productos.json"></script>
-    <script src="script.js"></script>
     <script>
-        // JSON de productos
-        const products =
-            [
-                {
-                    "nombre": "Figura de Colección Batman Returns Batman Michael Keaton Neca Articulado",
-                    "imagen": "images/Imagen1.jpg",
-                    "precio": "$8,200",
-                    "descripcion": "Batman 1989 Película Michael Keaton Figura de acción a escala 1:4: ¡Gran Batman! Figura de acción de Batman basada en la película Batman de 1989 "
-                },
-                {
-                    "nombre": "DeLorean, Doc. Emmet, McFly en escala 8-1",
-                    "imagen": "images/bttf.jpeg",
-                    "precio": "$2,000",
-                    "descripcion": "Paquete coleccionable con los personajes principales de Volver al futuro, con figuras de 25 cm de alto"
-                },
-                {
-                    "nombre": "SWAMP THING VOL. 3",
-                    "imagen": "images/swamp.jpg",
-                    "precio": "$410",
-                    "descripcion": "Continuando con las colecciones de tapa dura de la premiada carrera de Alan Moore en THE SAGA OF THE SWAMP THING "
-                },
-                {
-                    "nombre": "Edición coleccionista Hollow Knight",
-                    "imagen": "images/hk.jpeg",
-                    "precio": "$1,289",
-                    "descripcion": "Hollow Knight ya está disponible en una edición física para PC (disco sin DRM con clave Steam), incluida una edición especial para coleccionistas"
-                },
-                {
-                    "nombre": "Hasbro Marvel Legends Series - Wolverine",
-                    "imagen": "images/im3.jpg",
-                    "precio": "$1,199",
-                    "descripcion": "El proyecto Arma X dotó a Wolverine de un esqueleto de adamantium, convirtiéndolo en un mutante con capacidades de regeneración excepcionales "
-                },
-                {
-                    "nombre": "Manga Neon Genesis Evangelion Vol. 5",
-                    "imagen": "images/e2.jpg",
-                    "precio": "$599",
-                    "descripcion": "Volumen número 5 del manga Neon Genesis Evangelion"
-                },
-                {
-                    "nombre": "Figura Revali The Legend of Zelda",
-                    "imagen": "images/rev.jpg",
-                    "precio": "$4,000",
-                    "descripcion": "Figura coleccionable del videojuego The Legend of Zelda del personaje Revali"
-                },
-                {
-                    "nombre": "Manga One Piece Vol. 100",
-                    "imagen": "images/im8.jpg",
-                    "precio": "$15",
-                    "descripcion": "Manga del anime One piece Volúmen número 100 "
-                },
-                {
-                    "nombre": "Figura Spiderman",
-                    "imagen": "images/sp.jpg",
-                    "precio": "$299",
-                    "descripcion": "Figura de acción de Spiderman de la películo Spiderman into the spiderverse"
-                },
-                {
-                    "nombre": "Figura Goku",
-                    "imagen": "images/g.jpg",
-                    "precio": "$15",
-                    "descripcion": "Figura coleccionable del personaje Goku del anime Dragon ball Z"
-                },
-            ]
-            ;
-
-
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('productos.json').then(response => response.json()).then(productos => {
+                const contenedor = document.getElementById('product-container');
+                contenedor.innerHTML = ''; // Limpiar el contenedor completamente antes de añadir productos
+                productos.forEach(producto => {
+                    const productoHTML = `
+                        <div class="col-md-4 mb-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${producto.nombre}</h5>
+                                    <p class="card-text">${producto.descripcion}</p>
+                                    <p class="price">${producto.precio}</p>
+                                    <a href="producto.html?nombre=${encodeURIComponent(producto.nombre)}" class="btn btn-primary">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>`;
+                    contenedor.innerHTML += productoHTML; // Añadir cada producto al contenedor
+                });
+            }).catch(error => console.error('Error al cargar los productos:', error));
+        });
     </script>
+
     <script src="../bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 
 
     <script>
-    function iniciarSesion() {
-        alert("Inicio de sesión exitoso.");
-        window.location.href = 'index.html'; // Asumiendo que 'index.html' es tu menú principal.
-    }
+        function iniciarSesion() {
+            alert("Inicio de sesión exitoso.");
+            window.location.href = 'index.html'; // Asumiendo que 'index.html' es tu menú principal.
+        }
 
-    function registrarse() {
-        alert("Registro exitoso. Por favor, inicie sesión.");
-        window.location.href = 'index.html'; // Asumiendo que 'index.html' es tu menú principal.
-    }
-</script>
+        function registrarse() {
+            alert("Registro exitoso. Por favor, inicie sesión.");
+            window.location.href = 'index.html'; // Asumiendo que 'index.html' es tu menú principal.
+        }
+    </script>
+
+
+    <script>// script barra de busqueda
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let productos = [];
+
+            // Carga de productos desde productos.json
+            fetch('productos.json')
+                .then(response => response.json())
+                .then(data => {
+                    productos = data;
+                    mostrarProductos(productos);
+                })
+                .catch(error => console.error('Error al cargar los productos:', error));
+
+            // Función para mostrar productos
+            function mostrarProductos(productos) {
+                const contenedor = document.getElementById('product-container');
+                contenedor.innerHTML = ''; // Limpiar el contenedor completamente antes de añadir productos
+                productos.forEach(producto => {
+                    const productoHTML = `<div class="card" style="width: 18rem;">
+                                      <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                                      <div class="card-body">
+                                        <h5 class="card-title">${producto.nombre}</h5>
+                                        <p class="card-text">${producto.descripcion}</p>
+                                        <p class="price">${producto.precio}</p>
+                                      </div>
+                                  </div>`;
+                    contenedor.innerHTML += productoHTML; // Añadir cada producto al contenedor
+                });
+            }
+
+            // Función para configurar la búsqueda
+            const botonBuscar = document.querySelector('.btn-outline-success'); // Selecciona el botón de búsqueda
+            botonBuscar.addEventListener('click', function (event) {
+                event.preventDefault(); // Evitar que el formulario se envíe y recargue la página
+                const inputBusqueda = document.querySelector('[type="search"]').value.toLowerCase();
+                const productosFiltrados = productos.filter(producto => producto.nombre.toLowerCase().includes(inputBusqueda));
+                mostrarProductos(productosFiltrados); // Mostrar los productos filtrados
+            });
+
+            // Función para ordenar productos
+            function ordenarProductos(criterio, ascendente) {
+                productos.sort((a, b) => {
+                    if (criterio === 'nombre') {
+                        return ascendente ? a.nombre.localeCompare(b.nombre) : b.nombre.localeCompare(a.nombre);
+                    } else if (criterio === 'precio') {
+                        // Remover signos no numéricos y convertir a float para la comparación
+                        return ascendente ? parseFloat(a.precio.replace(/[$,]/g, '')) - parseFloat(b.precio.replace(/[$,]/g, '')) :
+                            parseFloat(b.precio.replace(/[$,]/g, '')) - parseFloat(a.precio.replace(/[$,]/g, ''));
+                    }
+                });
+                mostrarProductos(productos); // Mostrar productos ordenados
+            }
+
+            window.ordenarProductos = ordenarProductos; // Exponer ordenarProductos a nivel global para usar en botones HTML
+        });
+
+    </script>
 
 
 </body>
