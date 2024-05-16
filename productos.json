@@ -2,61 +2,61 @@
     {
         "nombre": "Figura de Colección Batman Returns Batman Michael Keaton Neca Articulado",
         "imagen": "images/Imagen1.jpg",
-        "precio": "8200",
+        "precio": "$8,200",
         "descripcion": "Batman 1989 Película Michael Keaton Figura de acción a escala 1:4: ¡Gran Batman! Figura de acción de Batman basada en la película Batman de 1989 "
     },
     {
         "nombre": "DeLorean, Doc. Emmet, McFly en escala 8-1",
         "imagen": "images/bttf.jpeg",
-        "precio": "2000",
+        "precio": "$2,000",
         "descripcion": "Paquete coleccionable con los personajes principales de Volver al futuro, con figuras de 25 cm de alto"
     },
     {
         "nombre": "SWAMP THING VOL. 3",
         "imagen": "images/swamp.jpg",
-        "precio": "410",
+        "precio": "$410",
         "descripcion": "Continuando con las colecciones de tapa dura de la premiada carrera de Alan Moore en THE SAGA OF THE SWAMP THING "
     },
     {
         "nombre": "Edición coleccionista Hollow Knight",
         "imagen": "images/hk.jpeg",
-        "precio": "1289",
+        "precio": "$1,289",
         "descripcion": "Hollow Knight ya está disponible en una edición física para PC (disco sin DRM con clave Steam), incluida una edición especial para coleccionistas"
     },
     {
         "nombre": "Hasbro Marvel Legends Series - Wolverine",
         "imagen": "images/im3.jpg",
-        "precio": "1199",
+        "precio": "$1,199",
         "descripcion": "El proyecto Arma X dotó a Wolverine de un esqueleto de adamantium, convirtiéndolo en un mutante con capacidades de regeneración excepcionales "
     },
     {
         "nombre": "Manga Neon Genesis Evangelion Vol. 5",
         "imagen": "images/e2.jpg",
-        "precio": "599",
+        "precio": "$599",
         "descripcion": "Volumen número 5 del manga Neon Genesis Evangelion"
     },
     {
         "nombre": "Figura Revali The Legend of Zelda",
         "imagen": "images/rev.jpg",
-        "precio": "4000",
+        "precio": "$4,000",
         "descripcion": "Figura coleccionable del videojuego The Legend of Zelda del personaje Revali"
     },
     {
         "nombre": "Manga One Piece Vol. 100",
         "imagen": "images/im8.jpg",
-        "precio": "15",
+        "precio": "$15",
         "descripcion": "Manga del anime One piece Volúmen número 100 "
     },
     {
         "nombre": "Figura Spiderman",
         "imagen": "images/sp.jpg",
-        "precio": "299",
+        "precio": "$299",
         "descripcion": "Figura de acción de Spiderman de la películo Spiderman into the spiderverse"
     },
     {
         "nombre": "Figura Goku",
         "imagen": "images/g.jpg",
-        "precio": "15",
+        "precio": "$15",
         "descripcion": "Figura coleccionable del personaje Goku del anime Dragon ball Z"
     }
 ]

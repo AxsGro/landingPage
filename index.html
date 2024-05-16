@@ -132,9 +132,13 @@
                             <div class="product-card">
                                 <img src="${product.imagen}" alt="${product.nombre}" style="width:100px; height:100px;">
                                 <h3>${product.nombre}</h3>
-                                <p>Precio: $${product.precio}</p>
+                                <p>Precio: ${product.precio}</p>
                                 <p>${product.descripcion}</p>
+<<<<<<< HEAD
                                 <a href="producto.html?producto=${encodeURIComponent(JSON.stringify(product))}" class="btn btn-primary">Ver detalles</a>
+=======
+                                <a href="producto.html?id=${encodeURIComponent(product.nombre)}" class="btn btn-primary">Ver detalles</a>
+>>>>>>> parent of f451aeb (Update index.html)
                             </div>
                         `;
                         productContainer.innerHTML += productHTML;
