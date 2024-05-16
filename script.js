@@ -89,7 +89,7 @@ cargarDetallesProducto(productName);
 
                         <div class="product-btn" data-producto="${product.nombre}">
                         <button type="button" class="btn btn-primary" data-producto="${product.nombre}">
-                        Primary</button></div>
+                        Ver detalles</button></div>
 
 
                     </div>
