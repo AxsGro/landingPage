@@ -62,6 +62,7 @@ function cargarDetallesProducto(productName) {
                     <p><strong>Precio:</strong> ${product.precio}</p>
                     <p><strong>Descripción:</strong> ${product.descripcion}</p>
                     <a href="javascript:history.back()" class="btn">Volver atrás</a>
+                    <button onclick="agregarAListaDeseos('${product.nombre}')" class="btn btn-warning">Agregar a mi lista de deseos</button>
                 `;
             } else {
                 // Manejar el caso en el que el producto no se encuentra
@@ -69,6 +70,17 @@ function cargarDetallesProducto(productName) {
             }
         })
         .catch(error => console.error('Error al cargar los detalles del producto:', error));
+}
+
+function agregarAListaDeseos(productoId) {
+    let listaDeseos = JSON.parse(localStorage.getItem('listaDeseos')) || [];
+    if (!listaDeseos.includes(productoId)) {
+        listaDeseos.push(productoId);
+        localStorage.setItem('listaDeseos', JSON.stringify(listaDeseos));
+        alert('Producto agregado a la lista de deseos!');
+    } else {
+        alert('Este producto ya está en tu lista de deseos.');
+    }
 }
 
 // Llamar a la función para cargar los detalles del producto
