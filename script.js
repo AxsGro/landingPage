@@ -122,3 +122,53 @@ cargarDetallesProducto(productName);
                 });
             });
         };
+/*reseñas */
+// Define una función para cargar las reseñas desde el almacenamiento local
+function cargarReseñas() {
+    var reseñasGuardadas = localStorage.getItem("reseñas");
+    if (reseñasGuardadas) {
+        return JSON.parse(reseñasGuardadas);
+    } else {
+        return [];
+    }
+}
+
+// Define una función para mostrar las reseñas en la página
+function mostrarReseñas() {
+    var reseñas = cargarReseñas();
+    var reseñasContainer = document.getElementById("reviews-container");
+    reseñasContainer.innerHTML = "";
+    reseñas.forEach(function(reseña) {
+        var reseñaElement = document.createElement("div");
+        reseñaElement.classList.add("review");
+        reseñaElement.innerHTML = `
+            <p><strong>${reseña.nombre}</strong></p>
+            <p>${reseña.comentario}</p>
+        `;
+        reseñasContainer.appendChild(reseñaElement);
+    });
+}
+
+// Define una función para guardar una nueva reseña
+function guardarReseña(nombre, comentario) {
+    var reseñas = cargarReseñas();
+    reseñas.push({ nombre: nombre, comentario: comentario });
+    localStorage.setItem("reseñas", JSON.stringify(reseñas));
+}
+
+// Define una función para manejar el envío del formulario de reseña
+function manejarEnvioReseña(event) {
+    event.preventDefault();
+    var nombre = document.getElementById("name").value;
+    var comentario = document.getElementById("review").value;
+    guardarReseña(nombre, comentario);
+    mostrarReseñas();
+    // Reinicia el formulario después de enviar la reseña
+    document.getElementById("review-form").reset();
+}
+
+// Agrega un event listener al formulario de reseña
+document.getElementById("review-form").addEventListener("submit", manejarEnvioReseña);
+
+// Muestra las reseñas cuando se carga la página
+mostrarReseñas();
