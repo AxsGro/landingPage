@@ -142,7 +142,7 @@ function mostrarReseñas() {
         var reseñaElement = document.createElement("div");
         reseñaElement.classList.add("review");
         reseñaElement.innerHTML = `
-            <p><strong>${reseña.nombre}</strong></p>
+            <p><strong>${reseña.nombre}</strong> - Calificación: ${reseña.calificación}</p>
             <p>${reseña.comentario}</p>
         `;
         reseñasContainer.appendChild(reseñaElement);
@@ -150,9 +150,9 @@ function mostrarReseñas() {
 }
 
 // Define una función para guardar una nueva reseña
-function guardarReseña(nombre, comentario) {
+function guardarReseña(nombre, comentario, calificación) {
     var reseñas = cargarReseñas();
-    reseñas.push({ nombre: nombre, comentario: comentario });
+    reseñas.push({ nombre: nombre, comentario: comentario, calificación: calificación });
     localStorage.setItem("reseñas", JSON.stringify(reseñas));
 }
 
@@ -161,7 +161,8 @@ function manejarEnvioReseña(event) {
     event.preventDefault();
     var nombre = document.getElementById("name").value;
     var comentario = document.getElementById("review").value;
-    guardarReseña(nombre, comentario);
+    var calificación = document.getElementById("rating").value;
+    guardarReseña(nombre, comentario, calificación);
     mostrarReseñas();
     // Reinicia el formulario después de enviar la reseña
     document.getElementById("review-form").reset();
