@@ -1,1 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+header {
+  background-color: #f0f2f5;
+  color: white;
+  padding: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Asegura que las tarjetas estén centradas horizontalmente */
+  gap: 20px; /* Añade espacio entre las tarjetas */
+  padding: 20px 0; /* Espacio vertical para el contenedor */
+}
+
+.product-card {
   flex-basis: calc(20% - 20px); /* Ajusta el tamaño de las tarjetas según tus necesidades */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Bordes más redondeados */
+  margin: 10px; /* Espacio uniforme alrededor de cada tarjeta */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para la tarjeta */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para hover */
+  box-sizing: border-box; /* Asegura que el borde y el relleno no aumenten el tamaño de las tarjetas */
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Eleva la tarjeta ligeramente al hacer hover */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Sombra más pronunciada en hover */
+}
+
+.product-img img {
+  width: 100%;
+  height: auto; /* Para mantener la proporción de la imagen */
+  object-fit: cover; /* Asegura que las imágenes se ajusten al contenedor */
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-price {
+  font-weight: bold;
+}
+
+.product-btn {
+  padding: 10px 20px;
+  background-color: rgba(255, 81, 0, 0);
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-btn:hover {
+  background-color: #d5430000;
+  color: #d54300;
+}
+
+footer {
+  background-color: #333333;
+}
+
+.socials-container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px 40px;
+  background-color: #333333;
+}
+
+.social {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.btn {
+  background-color: #eb5b08;
+  border: 1px solid #a88734;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #ddb347;
+}
