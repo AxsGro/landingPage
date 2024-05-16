@@ -130,7 +130,7 @@ cargarDetallesProducto(productName);
                     // Obtener el nombre del producto desde el atributo data-producto
                     const productName = this.dataset.producto;
                     // Redirigir a la página del producto con el nombre como parámetro
-                    window.location.href = 'producto.html?id=' + encodeURIComponent(productName);
+                    window.location.href = "producto.html?producto=" + encodeURIComponent(JSON.stringify(product));
                 });
             });
         };
