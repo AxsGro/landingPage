@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/dist/css/adminlte.min.css">
+  <style>
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 20px;
+    }
+    .content-wrapper {
+      margin-left: 0 !important; /* Eliminar margen para la sidebar */
+    }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <!-- Botón personalizado eliminado -->
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <!-- Sidebar eliminada -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Perfil</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img id="profile-img" class="profile-user-img img-fluid img-circle" src="https://adminlte.io/themes/v3/dist/img/user4-128x128.jpg" alt="Foto de perfil" onclick="document.getElementById('upload-img').click();">
+                  <input type="file" id="upload-img" style="display:none" onchange="loadImage(event)">
+                </div>
+                <h3 class="profile-username text-center" id="profile-name">John Doe</h3>
+              </div>
+            </div>
+            <div class="social-icons text-center">
+              <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+              <a href="https://facebook.com" target="_blank" class="fab fa-facebook"></a>
+              <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-header p-2">
+                <ul class="nav nav-pills">
+                  <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Actividad</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#profile-info" data-toggle="tab">Información del perfil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#favorites" data-toggle="tab">Favoritos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#contacts" data-toggle="tab">Contactos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#wishlist" data-toggle="tab">Lista de deseos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Configuración</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="active tab-pane" id="activity">
+                    <!-- Contenido de actividad -->
+                  </div>
+                
+                  <div class="tab-pane" id="profile-info">
+                    <div class="form-horizontal">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Nombre</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="profile-name-input" class="form-control" style="display: none;">
+                                <label id="profile-name-label" class="form-control-plaintext">John</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-primary btn-block" onclick="editProfileField('name')">Editar</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Apellidos</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="profile-lastname-input" class="form-control" style="display: none;">
+                                <label id="profile-lastname-label" class="form-control-plaintext">Doe</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-primary btn-block" onclick="editProfileField('lastname')">Editar</button>
+                            </div>
+                        </div>                      
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Correo Electrónico</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="profile-email-input" class="form-control" style="display: none;">
+                                <label id="profile-email-label" class="form-control-plaintext">correo@example.com</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-primary btn-block" onclick="editProfileField('email')">Editar</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Teléfono</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="profile-phone-input" class="form-control" style="display: none;">
+                                <label id="profile-phone-label" class="form-control-plaintext">123-456-7890</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-primary btn-block" onclick="editProfileField('phone')">Editar</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Pais</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="profile-city-input" class="form-control" style="display: none;">
+                                <label id="profile-city-label" class="form-control-plaintext">Pais de Ejemplo</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-primary btn-block" onclick="editProfileField('city')">Editar</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Ciudad</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="profile-city-input" class="form-control" style="display: none;">
+                                <label id="profile-city-label" class="form-control-plaintext">Ciudad de Ejemplo</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-primary btn-block" onclick="editProfileField('city')">Editar</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Dirección</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="profile-address-input" class="form-control" style="display: none;">
+                                <label id="profile-address-label" class="form-control-plaintext">Dirección de Ejemplo</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-primary btn-block" onclick="editProfileField('address')">Editar</button>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                                
+
+                  </div>
+                  <div class="tab-pane" id="favorites">
+                    <!-- Contenido de favoritos -->
+                  </div>
+                  <div class="tab-pane" id="contacts">
+                    <!-- Contenido de contactos -->
+                  </div>
+                  <div class="tab-pane" id="social">
+                    <!-- Contenido de redes sociales -->
+                  </div>
+                  <div class="tab-pane" id="wishlist">
+                    <!-- Contenido de lista de deseos -->
+                  </div>
+                  <div class="tab-pane" id="settings">
+                    <!-- Contenido de configuración -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="https://adminlte.io/themes/v3/plugins/jquery/jquery.min.js"></script>
+<script src="https://adminlte.io/themes/v3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://adminlte.io/themes/v3/dist/js/adminlte.min.js"></script>
+<script>
+  function loadImage(event) {
+    const output = document.getElementById('profile-img');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  }
+
+  function editProfileField(field) {
+    const inputField = document.getElementById(`profile-${field}-input`);
+    const labelField = document.getElementById(`profile-${field}-label`);
+    inputField.style.display = 'block';
+    inputField.value = labelField.textContent;
+    labelField.style.display = 'none';
+    inputField.focus();
+  
+    // Ocultar el campo de entrada cuando se presiona "Enter"
+    inputField.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        saveProfileField(field);
+      }
+    });
+  }
+
+  function saveProfileField(field) {
+    const inputField = document.getElementById(`profile-${field}-input`);
+    const labelField = document.getElementById(`profile-${field}-label`);
+    labelField.textContent = inputField.value;
+    labelField.style.display = 'block';
+    inputField.style.display = 'none';
+  
+    // Actualizar nombre y apellido debajo de la imagen
+    if (field === 'name') {
+      document.getElementById('profile-name').textContent = inputField.value;
+    } else if (field === 'lastname') {
+      document.getElementById('profile-lastname').textContent = inputField.value;
+    }
+  }
+  
+</script>
+</body>
+</html>
