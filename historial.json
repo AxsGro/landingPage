@@ -1,0 +1,23 @@
+[
+    {
+        "cantidad": "1",
+        "nombre": "Figura de Colección Batman Returns Batman Michael Keaton Neca Articulado",
+        "imagen": "images/Imagen1.jpg",
+        "fecha": "12/05/2024",
+        "status": "Entregado "
+    },
+    {
+        "cantidad": "1",
+        "nombre": "Edición coleccionista Hollow Knight",
+        "imagen": "images/hk.jpeg",
+        "fecha": "14/05/2024",
+        "status": "Pendiente"
+    },
+    {
+        "cantidad": "5",
+        "nombre": "Manga Neon Genesis Evangelion Vol. 5",
+        "imagen": "images/e2.jpg",
+        "fecha": "15/05/2024",
+        "status": "Pendiente "
+    }
+]
