@@ -42,7 +42,7 @@ cargarProductos();
 // Obtener el parámetro de consulta de la URL
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const productName = urlParams.get('producto');
+const productName = urlParams.get('id');
 
 // Función para cargar los detalles del producto
 function cargarDetallesProducto(productName) {
@@ -130,7 +130,8 @@ cargarDetallesProducto(productName);
                     // Obtener el nombre del producto desde el atributo data-producto
                     const productName = this.dataset.producto;
                     // Redirigir a la página del producto con el nombre como parámetro
-                    window.location.href = "producto.html?producto=" + encodeURIComponent(JSON.stringify(product));
+                    window.location.href = "producto.html?id=" + encodeURIComponent(product.nombre);
+
                 });
             });
         };
